@@ -1,42 +1,23 @@
--- This project involves the creation of a clothing store database using SQL. The database includes a "store" table with columns for item ID, item name, category, price, quantity, and color. 
-The data is populated using SQL INSERT statements. Various SQL queries are then used to analyze the data, including displaying the entire database ordered by price, 
-finding the total cost of all skirts in the database, and determining the average price of an item in the store. 
-This project demonstrates how SQL can be used to create and manipulate databases for retail businesses.
+README.md
 
-CREATE TABLE store (
-    item_id INTEGER PRIMARY KEY,
-    item_name TEXT,
-    category TEXT,
-    price REAL,
-    quantity INTEGER,
-    color TEXT
-);
+# Clothing Store Database using SQL
 
-INSERT INTO store (item_id, item_name, category, price, quantity, color)
-VALUES
-    (1,'floral dress','dresses', 100, 25, 'pink'),
-    (2,'red dress', 'dresses', 150, 30, 'red'),
-    (3,'blue skirt', 'skirts', 60, 44, 'blue'),
-    (4,'purple skirt', 'skirts', 60, 40, 'purple'),
-    (5,'pink dress', 'dresses', 130, 20, 'pink'),
-    (6,'teal skirt', 'skirts', 50, 55, 'teal'),
-    (7, 'blue top', 'tops', 69, 30, 'blue'),
-    (8, 'purple top', 'tops', 70, 20, 'purple'),
-    (9, 'red top', 'tops', 60, 40, 'red'),
-    (10, 'stripe dress', 'dresses', 200, 10, 'purple'),
-    (11,' polka dot skirt', 'skirt', 100, 44, 'pink'),
-    (12, 'sheer skirt', 'skirt', 40, 20, 'blue'),
-    (13, 'diamond dress', 'dresses', 230, 5, 'pink'),
-    (14, 'maxi dress', 'dresses', 170, 33, 'red'),
-    (15, 'flare dress', 'dresses', 80, 25, 'pink');
-    
--- Display the database ordered by price.
-    
-SELECT * FROM store
-ORDER BY price desc;;
+This project involves the creation of a clothing store database using SQL. The database includes a "store" table with columns for item ID, item name, category, price, quantity, and color. The data is populated using SQL INSERT statements. Various SQL queries are then used to analyze the data, including displaying the entire database ordered by price, finding the total cost of all skirts in the database, and determining the average price of an item in the store.
 
---What is the total cost of all the skirts?
-SELECT sum(quantity) from store WHERE category= 'skirts';
+## Technologies
+- SQL
 
---What is the avergae price of an item from this store?
-SELECT avg(price) FROM store
+## Installation
+1. Install a SQL database management system such as MySQL or PostgreSQL.
+2. Copy and paste the SQL code from `clothing_store_database.sql` into the database management system's SQL editor.
+3. Run the SQL code to create the `store` table and populate it with data.
+
+## Usage
+- Run the SQL queries in `clothing_store_database.sql` to analyze the data in the `store` table.
+- Modify the SQL code to create your own clothing store database with custom data.
+
+## Contributing
+This project is open for contributions. Feel free to submit a pull request or open an issue for any suggestions or bug fixes.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
